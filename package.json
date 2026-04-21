@@ -1,0 +1,24 @@
+{
+  "name": "iacs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "better-sqlite3": "^12.9.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "fs-extra": "^11.3.4",
+    "groq-sdk": "^1.1.2",
+    "puppeteer": "^24.42.0",
+    "slugify": "^1.6.9",
+    "turndown": "^7.2.4",
+    "uuid": "^14.0.0"
+  }
+}

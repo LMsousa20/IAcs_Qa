@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suporte IA ACS - AppPosto</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo-section">
+                <img src="../img/logo.png" alt="Logo ACS" srcset="../img/logo.png">
+            </div>
+
+            <button id="new-chat-btn" class="new-chat-button">
+                <span>+</span> Novo Chat
+            </button>
+
+            <div class="history-section">
+                <h3>Histórico</h3>
+                <div id="sessions-list" class="sessions-list">
+                    <!-- Sessões serão carregadas aqui -->
+                </div>
+            </div>
+
+            <div class="stats-section">
+                <p>Status: <span class="status-online">Online</span></p>
+                <p>K-Base: <span id="doc-count">96</span> docs</p>
+                <button id="sync-btn" class="sync-button">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M23 4v6h-6"></path>
+                        <path d="M1 20v-6h6"></path>
+                        <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                    </svg>
+                    Sincronizar Docs
+                </button>
+            </div>
+            <div class="sidebar-footer">
+                <p>© 2026 ACS System</p>
+            </div>
+        </aside>
+
+        <main class="chat-area">
+            <header class="chat-header">
+                <h2>Assistente Especialista</h2>
+                <div class="model-badge">LLaMA 3.3 70B</div>
+            </header>
+
+            <div id="chat-messages" class="messages-container">
+                <div class="message system-message">
+                    Olá! Sou o especialista da ACS. Como posso te ajudar com o AppPosto ou Síntese hoje?
+                </div>
+            </div>
+
+            <footer class="chat-input-area">
+                <form id="chat-form">
+                    <input type="text" id="user-input"
+                        placeholder="Pergunte algo sobre o sistema... (ex: Como fechar o caixa?)" autocomplete="off">
+                    <button type="submit" id="send-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </form>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Overlay de Atualização -->
+    <div id="update-overlay" class="update-overlay hidden">
+        <div class="overlay-content">
+            <div class="spinner"></div>
+            <h3>Sincronizando Documentação...</h3>
+            <p>Aguarde, estamos trazendo as últimas novidades do Confluence.</p>
+            <p class="sub-text">O chat voltará a ficar disponível em instantes.</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
